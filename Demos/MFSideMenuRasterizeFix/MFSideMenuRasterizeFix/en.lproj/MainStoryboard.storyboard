@@ -1,0 +1,166 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="2.0" toolsVersion="3084" systemVersion="12E55" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="gNW-NJ-AoI">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="2083"/>
+    </dependencies>
+    <scenes>
+        <!--Side Menu Container View Controller-->
+        <scene sceneID="WKc-mw-AwL">
+            <objects>
+                <viewController storyboardIdentifier="MFSideMenuContainerViewController" id="gNW-NJ-AoI" customClass="MFSideMenuContainerViewController" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="FxD-UD-EWR">
+                        <rect key="frame" x="0.0" y="20" width="320" height="548"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="rkI-7k-E9V" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-976" y="-726"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="VqX-zU-59b">
+            <objects>
+                <navigationController storyboardIdentifier="navigationController" definesPresentationContext="YES" id="zr4-jW-jKF" sceneMemberID="viewController">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="d0O-i3-Gbn">
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="wGe-xG-xPy" kind="relationship" relationship="rootViewController" id="Tm5-ha-oP9"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="TFz-ng-Wb8" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-976" y="72"/>
+        </scene>
+        <!--Demo View Controller-->
+        <scene sceneID="0nq-IV-8FL">
+            <objects>
+                <viewController storyboardIdentifier="DemoViewController" id="wGe-xG-xPy" customClass="DemoViewController" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="tLS-p5-JZD">
+                        <rect key="frame" x="0.0" y="64" width="320" height="504"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" image="seattle.jpg" translatesAutoresizingMaskIntoConstraints="NO" id="inp-Jf-QPH">
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="240" id="VDT-tk-yAI"/>
+                                </constraints>
+                            </imageView>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="FSl-9I-4Ka">
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                            </view>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Q7q-cx-1dW">
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
+                                <state key="normal" title="Button">
+                                    <color key="titleColor" red="0.19607843459999999" green="0.30980393290000002" blue="0.52156865600000002" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <state key="highlighted">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="loadVideo:" destination="wGe-xG-xPy" eventType="touchUpInside" id="Yqi-vd-NCQ"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="FSl-9I-4Ka" firstAttribute="leading" secondItem="tLS-p5-JZD" secondAttribute="leading" type="default" id="8LT-dd-998"/>
+                            <constraint firstItem="Q7q-cx-1dW" firstAttribute="top" secondItem="tLS-p5-JZD" secondAttribute="top" constant="80" id="BHg-of-cu9"/>
+                            <constraint firstItem="FSl-9I-4Ka" firstAttribute="trailing" secondItem="tLS-p5-JZD" secondAttribute="trailing" type="default" id="EFy-oj-chy"/>
+                            <constraint firstItem="inp-Jf-QPH" firstAttribute="leading" secondItem="tLS-p5-JZD" secondAttribute="leading" type="default" id="FdK-dF-e3n"/>
+                            <constraint firstItem="FSl-9I-4Ka" firstAttribute="top" secondItem="tLS-p5-JZD" secondAttribute="top" type="default" id="QQ3-60-Xbg"/>
+                            <constraint firstItem="inp-Jf-QPH" firstAttribute="trailing" secondItem="tLS-p5-JZD" secondAttribute="trailing" type="default" id="fKy-m4-0B3"/>
+                            <constraint firstItem="inp-Jf-QPH" firstAttribute="top" secondItem="FSl-9I-4Ka" secondAttribute="bottom" constant="8" symbolic="YES" type="default" id="jPS-1k-lmT"/>
+                            <constraint firstItem="inp-Jf-QPH" firstAttribute="top" secondItem="tLS-p5-JZD" secondAttribute="top" constant="248" id="prQ-pN-NIL"/>
+                            <constraint firstItem="Q7q-cx-1dW" firstAttribute="leading" secondItem="tLS-p5-JZD" secondAttribute="leading" constant="117" id="s0c-dr-BDm"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="mg5-0D-FWY">
+                        <barButtonItem key="leftBarButtonItem" title="Menu" id="jtX-Dz-7UF">
+                            <connections>
+                                <action selector="showLeftMenuPressed:" destination="wGe-xG-xPy" id="A7R-BG-Ju8"/>
+                            </connections>
+                        </barButtonItem>
+                        <barButtonItem key="rightBarButtonItem" title="Menu" id="d8X-bb-IVy">
+                            <connections>
+                                <action selector="showRightMenuPressed:" destination="wGe-xG-xPy" id="6EF-AM-G5U"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="videoViewer" destination="FSl-9I-4Ka" id="dRM-y1-2xQ"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="3Om-sU-Pcp" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-469" y="72"/>
+        </scene>
+        <!--Side Menu View Controller - Left Side Menu-->
+        <scene sceneID="VXN-xx-5Rd">
+            <objects>
+                <tableViewController storyboardIdentifier="leftSideMenuViewController" title="Left Side Menu" id="djH-Q4-ggo" customClass="SideMenuViewController" sceneMemberID="viewController">
+                    <tableView key="view" opaque="NO" clipsSubviews="YES" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" id="gHv-pG-Kuc">
+                        <rect key="frame" x="0.0" y="20" width="320" height="548"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <connections>
+                            <outlet property="dataSource" destination="djH-Q4-ggo" id="R2x-p7-5Po"/>
+                            <outlet property="delegate" destination="djH-Q4-ggo" id="lfc-Av-J4U"/>
+                        </connections>
+                    </tableView>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="1Jh-Qb-paX" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-469" y="-726"/>
+        </scene>
+        <!--Side Menu View Controller - Right Side Menu-->
+        <scene sceneID="lKM-BM-uQJ">
+            <objects>
+                <tableViewController storyboardIdentifier="rightSideMenuViewController" title="Right Side Menu" id="JyP-hU-tmx" customClass="SideMenuViewController" sceneMemberID="viewController">
+                    <tableView key="view" opaque="NO" clipsSubviews="YES" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" id="SRL-mC-WGc">
+                        <rect key="frame" x="0.0" y="20" width="320" height="548"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <connections>
+                            <outlet property="dataSource" destination="JyP-hU-tmx" id="jkb-3a-eKW"/>
+                            <outlet property="delegate" destination="JyP-hU-tmx" id="Hc6-Cf-71R"/>
+                        </connections>
+                    </tableView>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Zbc-ym-lSh" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="23" y="-726"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="seattle.jpg" width="3264" height="2448"/>
+    </resources>
+    <classes>
+        <class className="DemoViewController" superclassName="UIViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/DemoViewController.h"/>
+            <relationships>
+                <relationship kind="action" name="loadVideo:"/>
+                <relationship kind="action" name="pushAnotherPressed:"/>
+                <relationship kind="action" name="showLeftMenuPressed:"/>
+                <relationship kind="action" name="showRightMenuPressed:"/>
+                <relationship kind="outlet" name="playVideo" candidateClass="UIButton"/>
+                <relationship kind="outlet" name="videoViewer" candidateClass="UIView"/>
+            </relationships>
+        </class>
+        <class className="MFSideMenuContainerViewController" superclassName="UIViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/MFSideMenuContainerViewController.h"/>
+        </class>
+        <class className="NSLayoutConstraint" superclassName="NSObject">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/NSLayoutConstraint.h"/>
+        </class>
+        <class className="SideMenuViewController" superclassName="UITableViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/SideMenuViewController.h"/>
+        </class>
+    </classes>
+    <simulatedMetricsContainer key="defaultSimulatedMetrics">
+        <simulatedStatusBarMetrics key="statusBar"/>
+        <simulatedOrientationMetrics key="orientation"/>
+        <simulatedScreenMetrics key="destination" type="retina4"/>
+    </simulatedMetricsContainer>
+</document>

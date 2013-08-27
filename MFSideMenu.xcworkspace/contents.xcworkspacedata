@@ -2,6 +2,9 @@
 <Workspace
    version = "1.0">
    <FileRef
+      location = "group:Demos/MFSideMenuRasterizeFix/MFSideMenuRasterizeFix.xcodeproj">
+   </FileRef>
+   <FileRef
       location = "group:Demos/MFSideMenuDemoBasic/MFSideMenuDemoBasic.xcodeproj">
    </FileRef>
    <FileRef

@@ -85,6 +85,9 @@
     self.shadowedView.layer.shadowOpacity = self.opacity;
     self.shadowedView.layer.shadowRadius = self.radius;
     self.shadowedView.layer.shadowColor = [self.color CGColor];
+    
+    //FIXME: Fix for issue #108
+    //self.shadowedView.layer.rasterizationScale = [[UIScreen mainScreen] scale];
 }
 
 - (void)hide {
